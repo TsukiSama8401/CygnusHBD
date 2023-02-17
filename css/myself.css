@@ -40,14 +40,21 @@ text-align:center;
 line-height:80px;
 }
 
-.pics{ position:relative;}
-.pics img{ position:absolute;
-  /* 淡出淡入效果2秒 */
-  -webkit-transition: opacity 2s ease-in-out;
-  -moz-transition: opacity 2s ease-in-out;
-  -o-transition: opacity 2s ease-in-out;
-  transition: opacity 2s ease-in-out;
- }
- .pics img:last-child:hover{
-   /* 滑入時第一張透明度設0 */
-    opacity:0;}
+#tachie {
+    animation-name: cross;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 200px;
+    height: 200px;
+  }
+
+  @keyframes cross {
+    0% {
+      transform: translate(0px);
+    }
+
+    100% {
+      transform: translate(1100px);
+    }
+  }

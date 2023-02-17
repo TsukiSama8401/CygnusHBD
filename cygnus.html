@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>熙歌</title>
-  <link rel="stylesheet" href="./css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./css/myself.css" />
-  <script src="./js/jquery-3.6.3.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>熙歌</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/myself.css" />
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </head>
 
-<body class="bg-dark text-white main-wrapper">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="cygnus.film.html">影片</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cygnus.sound.html">錄音</a>
-        </li>
-        <li class="nav-item">
-          <img src="./Cell/CygnusCell/C01.png" width="50px">
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cygnus.comment.html">留言</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="cygnus.ng.html">花絮</a>
-        </li>
-      </ul>
+  <body class="bg-dark text-white main-wrapper">
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="cygnus.film.html">影片</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cygnus.sound.html">錄音</a>
+            </li>
+            <li class="nav-item">
+              <img src="./Cell/CygnusCell/C01.png" width="50px" alt="這才是本體RRRR" />
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cygnus.comment.html">留言</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cygnus.ng.html">花絮</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <div id="cover">
+          <img src="" />
+        </div>
+        <div class="intro">
+
+        </div>
+        <div id="tachie">
+          <img id="cygnus-main"
+            src="./Cell/CygnusCell/vts-2022-11-16_21h51_13.png" width="900"
+            style="float:right" alter="熙歌超可愛~" />
+        </div>
+      </div>
     </div>
-  </nav>
-  <div>
-    <div class="pics">
-      <img id="cygnus-main" src="./Cell/CygnusCell/vts-2022-11-16_21h51_13.png" width="700" style="float:right" />
-      <img id="cygnus-sub" src="./Cell/CygnusCell/vts-2022-12-04_23h54_09.png" width="700" style="float:right" />
-    </div>
-  </div>
-  
-</body>
+  </body>
 
 </html>
 <script type="text/javascript">
-
-
   // 歌歌歌歌歌
   let count = 0;
   $(".main-wrapper").on("click", function (event) {
