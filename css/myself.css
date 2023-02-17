@@ -1,0 +1,53 @@
+sitebody{
+width:600px;
+margin:0 auto;
+font-size:13px;
+}
+header{
+background-color:#FFD4D4;
+height:80px;
+text-align:center;
+line-height:80px;
+}
+sidebar_left{
+width:120px;
+height:400px;
+text-align:center;
+line-height:400px;
+float:left;
+}
+sidebar_right{
+background-color:#FFECC9;
+width:120px;
+height:400px;
+text-align:center;
+line-height:400px;
+float:right;
+}
+content{
+margin-left:120px;
+margin-right:120px;
+height:400px;
+background-color:#F2FFF2;
+text-align:center;
+line-height:400px;
+}
+footer{
+clear:both;
+background-color:#FFD4D4;
+height:80px;
+text-align:center;
+line-height:80px;
+}
+
+.pics{ position:relative;}
+.pics img{ position:absolute;
+  /* 淡出淡入效果2秒 */
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+ }
+ .pics img:last-child:hover{
+   /* 滑入時第一張透明度設0 */
+    opacity:0;}
