@@ -8,28 +8,7 @@
         <script src="./js/jquery-3.6.3.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cygnus.Film.html"><strong>影片</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cygnus.Sound.html"><strong>錄音</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="Cygnus.html">
-                                <img src="./Cell/CygnusCell/C01.png" width="50px" alt="這才是本體RRRR" />
-                            </a> </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cygnus.Comment.html"><strong>留言</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cygnus.Ng.html"><strong>花絮</strong></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <div id="navbar"></div>
         </div>
     </head>
 
@@ -39,13 +18,15 @@
 
     <footer>
         <div>
-            <span style="font-size: small; font-style: normal; font-family:
-                Courier New;">Copyright©2023 CygnusStudio</span>
+            <span style="font-size: small; font-style: normal; font-family: Courier New;">Copyright©2023 CygnusStudio</span>
         </div>
     </footer>
 
 </html>
 <script type="text/javascript">
+  // 引入partial
+  $("#navbar").load("./CygnusPartial/CygnusNavbar.html");
+
   // 歌歌歌歌歌
   let count = 0;
   $(".main-wrapper").on("click", function (event) {

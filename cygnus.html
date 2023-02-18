@@ -8,36 +8,15 @@
     <script src="./js/jquery-3.6.3.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="Cygnus.Film.html"><strong>影片</strong></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Cygnus.Sound.html"><strong>錄音</strong></a>
-            </li>
-            <li class="nav-item">
-              <a href="Cygnus.html">
-                <img src="./Cell/CygnusCell/C01.png" width="50px" alt="這才是本體RRRR" />
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Cygnus.Comment.html"><strong>留言</strong></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Cygnus.Ng.html"><strong>花絮</strong></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div id="navbar"></div>
     </div>
   </head>
 
   <body class="bg-dark text-white main-wrapper">
     <div class="background">
       <div id="tachie">
-        <img id="cygnus-main" src="./Cell/CygnusCell/vts-2022-11-16_21h51_13.png" width="900" style="float:right" alter="熙歌超可愛~" />
+        <img id="cygnus-main" src="./res/CygnusCell/vts-2022-11-16_21h51_13.png"
+          width="900" style="float:right" alter="熙歌超可愛~" />
       </div>
     </div>
   </body>
@@ -52,6 +31,9 @@
 
 </html>
 <script type="text/javascript">
+  // 引入partial
+  $("#navbar").load("./CygnusPartial/CygnusNavbar.html");
+
   // 歌歌歌歌歌
   let count = 0;
   $(".main-wrapper").on("click", function (event) {
@@ -84,7 +66,7 @@
   
   // 跑馬燈
   var xhr = new XMLHttpRequest();
-  xhr.open('get','./Cell/CommonCell/comment.json',true);
+  xhr.open('get','./res/CommonCell/comment.json',true);
   xhr.send(null);
   xhr.onload = function(){
     var datastr = JSON.parse(xhr.responseText);
