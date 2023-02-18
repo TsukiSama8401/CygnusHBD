@@ -8,7 +8,7 @@
         <script src="./js/jquery-3.6.3.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         <div>
-          <div id="navbar"></div>
+            <div id="navbar"></div>
         </div>
     </head>
 
@@ -17,9 +17,7 @@
     </body>
 
     <footer>
-        <div class="marqee">
-            <ul class="info" style="display: flex;"></ul>
-            <br>
+        <div>
             <span style="font-size: small; font-style: normal; font-family: Courier New;">Copyright©2023 CygnusStudio</span>
         </div>
     </footer>
@@ -58,21 +56,4 @@
         target.remove();
       });
   });
-  
-  // 跑馬燈
-  var xhr = new XMLHttpRequest();
-  xhr.open('get','./res/CommonCell/comment.json',true);
-  xhr.send(null);
-  xhr.onload = function(){
-    var datastr = JSON.parse(xhr.responseText);
-    var info = document.querySelector('.info');
-    var len  = datastr.length;
-    var str= "";
-    for (var i = 0; i < len; i++) {
-      var content = '<li white-space: nowrap><p>'+datastr[i].id+'：'+datastr[i].comment+'</p></li>';
-      str+=content;
-      };
-    info.innerHTML += str;
-    };
-
 </script>

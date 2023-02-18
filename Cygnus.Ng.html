@@ -8,19 +8,18 @@
         <script src="./js/jquery-3.6.3.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         <div>
-            <div id="navbar"></div>
+          <div id="navbar"></div>
         </div>
     </head>
 
     <body class="bg-dark text-white main-wrapper">
-        <!--幕後花絮-->
-        <div></div>
-        <!--工作人員-->
-        <div></div>
+
     </body>
 
     <footer>
-        <div>
+        <div class="marqee">
+            <ul class="info" style="display: flex;"></ul>
+            <br>
             <span style="font-size: small; font-style: normal; font-family: Courier New;">Copyright©2023 CygnusStudio</span>
         </div>
     </footer>
@@ -29,18 +28,18 @@
 <script type="text/javascript">
     // 引入partial
     $("#navbar").load("./CygnusPartial/CygnusNavbar.html");
-  
+
     // 歌歌歌歌歌
     let count = 0;
     $(".main-wrapper").on("click", function (event) {
-        var elements = new Array("歌");
-        var target = $("<span/>").text(elements[count]);
-        if (count === elements.length - 1) {
+      var elements = new Array("歌");
+      var target = $("<span/>").text(elements[count]);
+      if (count === elements.length - 1) {
         $("row:hidden").show("normal");
-        }
-        var x = event.pageX,
+      }
+      var x = event.pageX,
         y = event.pageY;
-        target.css({
+      target.css({
         "z-index": 5,
         "top": y - 42,
         "left": x + (Math.floor(Math.random() * 60 - 30)),
@@ -48,15 +47,32 @@
         "font-weight": "bold",
         "color": "red",
         "font-size": "22pt"
-        });
-        $("body").append(target);
-        target.animate({
+      });
+      $("body").append(target);
+      target.animate({
         "top": y - 380,
         "opacity": 0
-        },
+      },
         1500,
         function () {
-            target.remove();
+          target.remove();
         });
     });
+    
+    // 跑馬燈
+    var xhr = new XMLHttpRequest();
+    xhr.open('get','./res/CommonCell/comment.json',true);
+    xhr.send(null);
+    xhr.onload = function(){
+      var datastr = JSON.parse(xhr.responseText);
+      var info = document.querySelector('.info');
+      var len  = datastr.length;
+      var str= "";
+      for (var i = 0; i < len; i++) {
+        var content = '<li white-space: nowrap><p>'+datastr[i].id+'：'+datastr[i].comment+'</p></li>';
+        str+=content;
+        };
+      info.innerHTML += str;
+      };
+
 </script>
