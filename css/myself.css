@@ -1,63 +1,28 @@
-sitebody{
-width:600px;
-margin:0 auto;
-font-size:13px;
+body{
+  margin:0 auto;
+  font-size:20px;
+  font-family: Impact;
+  font-weight:bold;
 }
 header{
-background-color:#FFD4D4;
-height:80px;
-text-align:center;
-line-height:80px;
-}
-sidebar_left{
-width:120px;
-height:400px;
-text-align:center;
-line-height:400px;
-float:left;
-}
-sidebar_right{
-background-color:#FFECC9;
-width:120px;
-height:400px;
-text-align:center;
-line-height:400px;
-float:right;
+  background-color:#FFD4D4;
+  height:80px;
+  text-align:center;
+  line-height:80px;
 }
 content{
-margin-left:120px;
-margin-right:120px;
-height:400px;
-background-color:#F2FFF2;
-text-align:center;
-line-height:400px;
+  margin-left:120px;
+  margin-right:120px;
+  height:400px;
+  background-color:#FFECC9;
+  text-align:center;
+  line-height:400px;
 }
 footer{
-clear:both;
-background-color:#FFD4D4;
-height:80px;
-text-align:center;
-line-height:80px;
+  clear:both;
+  background-color: black;
+  text-align:center;
 }
-
-#tachie {
-    animation-name: cross;
-    animation-duration: 10s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    width: 200px;
-    height: 200px;
-  }
-
-  @keyframes cross {
-    0% {
-      transform: translate(0px);
-    }
-
-    100% {
-      transform: translate(1100px);
-    }
-  }
 
   .marqee {
     height: 3em;
@@ -71,7 +36,7 @@ line-height:80px;
     padding-left: 0;
     display: flex;
     list-style-type: none;
-    animation: marqee 15s linear infinite;
+    animation: marqee 30s linear infinite;
     position: absolute;
   }
   
@@ -92,4 +57,14 @@ line-height:80px;
       left: 0;
       transform: translateX(-100%);
     }
+  }
+
+  .nav-item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .nav-item > a {
+    color: black
+    ;
   }

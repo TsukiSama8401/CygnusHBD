@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>熙歌</title>
@@ -8,47 +7,48 @@
     <link rel="stylesheet" href="./css/myself.css" />
     <script src="./js/jquery-3.6.3.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-  </head>
-
-  <body class="bg-dark text-white main-wrapper">
     <div>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="cygnus.film.html">影片</a>
+            <li class="nav-item">
+              <a class="nav-link" href="Cygnus.Film.html"><strong>影片</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cygnus.sound.html">錄音</a>
+              <a class="nav-link" href="Cygnus.Sound.html"><strong>錄音</strong></a>
             </li>
             <li class="nav-item">
-              <img src="./Cell/CygnusCell/C01.png" width="50px" alt="這才是本體RRRR"
-                />
+              <a href="Cygnus.html">
+                <img src="./Cell/CygnusCell/C01.png" width="50px" alt="這才是本體RRRR" />
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cygnus.comment.html">留言</a>
+              <a class="nav-link" href="Cygnus.Comment.html"><strong>留言</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cygnus.ng.html">花絮</a>
+              <a class="nav-link" href="Cygnus.Ng.html"><strong>花絮</strong></a>
             </li>
           </ul>
         </div>
       </nav>
-      <div>
-        <div id="cover">
-          <img src="" />
-        </div>
-        <div class="marqee">
-          <ul class="info" style="display: flex;"></ul>
-        </div>
-        <div id="tachie">
-          <img id="cygnus-main"
-            src="./Cell/CygnusCell/vts-2022-11-16_21h51_13.png" width="900"
-            style="float:right" alter="熙歌超可愛~" />
-        </div>
+    </div>
+  </head>
+
+  <body class="bg-dark text-white main-wrapper">
+    <div class="background">
+      <div id="tachie">
+        <img id="cygnus-main" src="./Cell/CygnusCell/vts-2022-11-16_21h51_13.png" width="900" style="float:right" alter="熙歌超可愛~" />
       </div>
     </div>
   </body>
+
+  <footer>
+    <div class="marqee">
+      <ul class="info" style="display: flex;"></ul>
+      <br>
+      <span style="font-size: small; font-style: normal; font-family: Courier New;">Copyright©2023 CygnusStudio</span>
+    </div>
+  </footer>
 
 </html>
 <script type="text/javascript">
@@ -82,7 +82,7 @@
       });
   });
   
-  // 其他
+  // 跑馬燈
   var xhr = new XMLHttpRequest();
   xhr.open('get','./Cell/CommonCell/comment.json',true);
   xhr.send(null);
