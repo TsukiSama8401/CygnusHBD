@@ -22,7 +22,8 @@
               <a class="nav-link" href="cygnus.sound.html">錄音</a>
             </li>
             <li class="nav-item">
-              <img src="./Cell/CygnusCell/C01.png" width="50px" alt="這才是本體RRRR" />
+              <img src="./Cell/CygnusCell/C01.png" width="50px" alt="這才是本體RRRR"
+                />
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cygnus.comment.html">留言</a>
@@ -37,8 +38,8 @@
         <div id="cover">
           <img src="" />
         </div>
-        <div class="intro">
-
+        <div class="marqee">
+          <ul class="info" style="display: flex;"></ul>
         </div>
         <div id="tachie">
           <img id="cygnus-main"
@@ -80,6 +81,21 @@
         target.remove();
       });
   });
-
+  
+  // 其他
+  var xhr = new XMLHttpRequest();
+  xhr.open('get','./Cell/CommonCell/comment.json',true);
+  xhr.send(null);
+  xhr.onload = function(){
+    var datastr = JSON.parse(xhr.responseText);
+    var info = document.querySelector('.info');
+    var len  = datastr.length;
+    var str= "";
+    for (var i = 0; i < len; i++) {
+      var content = '<li white-space: nowrap><p>'+datastr[i].id+'：'+datastr[i].comment+'</p></li>';
+      str+=content;
+      };
+    info.innerHTML += str;
+    };
 
 </script>
