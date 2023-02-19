@@ -13,11 +13,14 @@
   </head>
 
   <body class="bg-dark text-white main-wrapper">
-    <div class="background">
-      <div id="tachie">
-        <img id="cygnus-main" src="./res/CygnusCell/vts-2022-11-16_21h51_13.png"
-          width="900" style="float:right" alter="熙歌超可愛~" />
-      </div>
+
+    <div id="HbdFilm" style="text-align: center;">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/p_s3k_8ITCU" title="YouTube" 
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>     
+    <div id="tachie">
+      <img id="cygnus-main" src="./res/CygnusCell/vts-2022-11-16_21h51_13.png"
+        width="900" style="float:right" alter="熙歌超可愛~" />
     </div>
   </body>
 
@@ -39,7 +42,7 @@
   $(".main-wrapper").on("click", function (event) {
     var elements = new Array("歌");
     var target = $("<span/>").text(elements[count]);
-    if (count === elements.length - 1) {
+    if (count === 20) {
       $("row:hidden").show("normal");
     }
     var x = event.pageX,
@@ -80,4 +83,5 @@
     info.innerHTML += str;
     };
 
+  
 </script>
