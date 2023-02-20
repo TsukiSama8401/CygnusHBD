@@ -1,18 +1,18 @@
-footer{
-  clear:both;
+footer {
+  clear: both;
   background-color: black;
-  text-align:center;
+  text-align: center;
 }
 
 .marqee {
   height: 3em;
   margin: 0 auto;
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   background: black;
 }
 
-.marqee > ul {
+.marqee>ul {
   padding-left: 0;
   display: flex;
   list-style-type: none;
@@ -20,7 +20,7 @@ footer{
   position: absolute;
 }
 
-.marqee > ul > li {
+.marqee>ul>li {
   white-space: nowrap;
   margin-right: 2em;
   font-weight: bold;
@@ -44,6 +44,28 @@ footer{
   margin-right: 20px;
 }
 
-.nav-item > a {
+.nav-item>a {
   color: black;
+}
+
+.mugshot {
+  width: 70px;
+  height: 70px;
+  background: #4d4d4d;
+  border-radius: 99em;
+  display: inline;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background: #4d4d4d;
+  border-radius: 80em;
+  display: inline;
+}
+
+.audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
